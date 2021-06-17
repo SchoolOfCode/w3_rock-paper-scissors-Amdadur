@@ -75,10 +75,12 @@ h1 {
 }
 @keyframes leftSliding {
     from {
-        margin-left: -100%;
+        transform: scale(0.5, 0.5);
+        margin-left: -90%;
         opacity: 100%;
     }
     to {
+        transform: scale(1.5, 1.5);
         margin-left: 0%;
         opacity: 65%;
     }
@@ -91,10 +93,12 @@ h1 {
 }
 @keyframes rightSliding {
     from {
-        margin-left: 100%;
+        transform: scale(0.5, 0.5);
+        margin-left: 90%;
         opacity: 100%;
     }
     to {
+        transform: scale(1.5, 1.5);
         margin-left: -5%;
         opacity: 65%;
     }
@@ -103,7 +107,7 @@ h1 {
 #gif {
     position: absolute;
     top: 15%;
-    left: 40%;
+    left: 45%;
 }
 
 .losses {
@@ -202,4 +206,28 @@ h1 {
     background-color: #589b92;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+
+#bg {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from,
+    to {
+        transform: scale(1.023, 1);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 60%;
+    }
+    50% {
+        opacity: 60%;
+    }
+    95% {
+        opacity: 0%;
+    }
 }

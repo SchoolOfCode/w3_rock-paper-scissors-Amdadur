@@ -124,6 +124,14 @@ function playGame(e) {
 
 //creates new elements temporarily - timeout and removals
 function handAnimation() {
+    var bg = document.createElement("img");
+    bg.setAttribute("id", "bg");
+    bg.src = "./images/bg.png";
+    fxDiv.appendChild(bg);
+    setTimeout(() => {
+        bg.remove();
+    }, 800);
+
     var leftHand = document.createElement("img");
     leftHand.setAttribute("id", "leftHand");
     leftHand.src = `./images/${input}-small.png`;
