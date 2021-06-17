@@ -82,15 +82,23 @@ function getWinner(playerMove, computerMove) {
 }
 
 //event listeners for buttons - inputs player's choice
-rock_div.addEventListener("click", function () {
-    playGame("rock");
-});
-paper_div.addEventListener("click", function () {
-    playGame("paper");
-});
-scissor_div.addEventListener("click", function () {
-    playGame("scissor");
-});
+setTimeout(() => {
+    rock_div.addEventListener("click", function () {
+        playGame("rock");
+    });
+}, 500);
+
+setTimeout(() => {
+    paper_div.addEventListener("click", function () {
+        playGame("paper");
+    });
+}, 500);
+
+setTimeout(() => {
+    scissor_div.addEventListener("click", function () {
+        playGame("scissor");
+    });
+}, 500);
 
 //global variables - forced outside playGame() as these are called by handAnimation()
 let input = "";
@@ -130,7 +138,7 @@ function handAnimation() {
     fxDiv.appendChild(bg);
     setTimeout(() => {
         bg.remove();
-    }, 800);
+    }, 850);
 
     var leftHand = document.createElement("img");
     leftHand.setAttribute("id", "leftHand");
