@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Rock, Paper, Scissors</title>
-  </head>
-  <body></body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Rock Paper Scissors</title>
+    </head>
+
+    <body>
+        <div class="mainContainer">
+            <div class="text">
+                <h1>Rock Paper Scissors</h1>
+                <p>
+                    Rock beats scissors. Scissors beat paper. Paper beats rock.
+                </p>
+                <p class="action-call">How many wins can you get in a row</p>
+            </div>
+
+            <div class="resultBoard">
+                <p class="rounds">Round</p>
+                <p class="result">Result</p>
+                <p class="wins"></p>
+                <p class="losses"></p>
+                <p class="draws">Draws</p>
+                <p class="streak">Win Streak</p>
+            </div>
+
+            <div class="allChoices">
+                <div class="choice" id="rock">
+                    <img class="play" src="./images/rock.png" alt="rock" />
+                </div>
+
+                <div class="choice" id="paper">
+                    <img class="play" src="./images/paper.png" alt="paper" />
+                </div>
+
+                <div class="choice" id="scissor">
+                    <img
+                        class="play"
+                        src="./images/scissor.png"
+                        alt="scissor"
+                    />
+                </div>
+            </div>
+
+            <div class="reset">
+                <input
+                    class="resetButton"
+                    type="button"
+                    value="Restart"
+                    onClick="location.href=location.href"
+                />
+                <div class="fx"></div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
 </html>

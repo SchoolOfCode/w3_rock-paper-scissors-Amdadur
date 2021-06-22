@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,500&display=swap");
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Asap", sans-serif;
+    background: linear-gradient(
+        90deg,
+        rgba(77, 160, 176, 1) 0%,
+        rgba(211, 157, 56, 1) 100%
+    );
+}
+
+h1 {
+    padding: 20px;
+}
+
+.action-call {
+    padding: 20px 20px 10px 20px;
+}
+
+.text {
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+}
+
+.reset {
+    text-align: center;
+}
+
+.allChoices {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.resultBoard {
+    margin: 20px auto;
+    border-radius: 3px;
+    text-align: center;
+    width: 350px;
+    height: 150px;
+    font-size: 23px;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.allChoices {
+    display: flex;
+
+    padding: 20px 20px;
+}
+
+.wins {
+    position: absolute;
+    top: 10px;
+    left: -100px;
+    font-size: 100px;
+}
+
+#leftHand {
+    position: absolute;
+    top: 25%;
+    animation: leftSliding 1s;
+}
+@keyframes leftSliding {
+    from {
+        transform: scale(0.5, 0.5);
+        margin-left: -90%;
+        opacity: 100%;
+    }
+    to {
+        transform: scale(1.5, 1.5);
+        margin-left: 0%;
+        opacity: 65%;
+    }
+}
+
+#rightHand {
+    position: absolute;
+    top: 25%;
+    animation: rightSliding 1s;
+}
+@keyframes rightSliding {
+    from {
+        transform: scale(0.5, 0.5);
+        margin-left: 90%;
+        opacity: 100%;
+    }
+    to {
+        transform: scale(1.5, 1.5);
+        margin-left: -5%;
+        opacity: 65%;
+    }
+}
+
+#gif {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+}
+
+.losses {
+    position: absolute;
+    top: 10px;
+    right: -100px;
+    font-size: 100px;
+}
+
+.result {
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+#rock {
+    animation: gelatine1 1s infinite;
+}
+#paper {
+    animation: gelatine2 1s infinite;
+}
+#scissor {
+    animation: gelatine3 1s infinite;
+}
+
+@keyframes gelatine1 {
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+    28% {
+        transform: scale(1.1, 0.75);
+    }
+    60% {
+        transform: scale(1.1, 0.9);
+    }
+    79% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@keyframes gelatine2 {
+    from,
+    to {
+        transform: scale(0.93, 1);
+    }
+    18% {
+        transform: scale(0.9, 1.1);
+    }
+    55% {
+        transform: scale(0.89, 0.9);
+    }
+    71% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@keyframes gelatine3 {
+    from,
+    to {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(0.9, 1.1);
+    }
+    50% {
+        transform: scale(1.1, 0.9);
+    }
+    75% {
+        transform: scale(0.95, 1.05);
+    }
+}
+
+.resetButton {
+    font-family: "Asap", sans-serif;
+    display: inline-block;
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(0, 0, 0);
+}
+
+.resetButton:hover {
+    background-color: #b9b47f;
+}
+
+.resetButton:active {
+    background-color: #589b92;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#bg {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    animation: fade 1s;
+}
+
+@keyframes fade {
+    from,
+    to {
+        transform: scale(1.023, 1);
+        opacity: 0%;
+    }
+    25% {
+        opacity: 60%;
+    }
+    50% {
+        opacity: 60%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
